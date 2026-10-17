@@ -393,6 +393,33 @@ All relevant test cases, testing techniques, expected outcomes, execution result
 | CSV Testing Documentation | [CSV Testing Guide](docs/TASK3_CSV_TESTING.md) |
 | Ordered Suites Documentation | [Ordered Suites Guide](docs/README_TASK4.md) |
 
+## Project Demonstration Video
+
+A complete screen-recorded demonstration of our Software Quality Engineering (SQE) Unit Testing Project is available below.
+
+The video demonstrates:
+
+- GitHub repository and project structure
+- Project setup and dependency installation
+- Automated unit testing (169 test cases)
+- CSV data-driven testing
+- Parallel test execution
+- Ordered test suite execution
+- Code coverage analysis (99%)
+- Test documentation and execution results
+
+### Watch Demonstration Video
+
+**[Click Here to Watch the SQE Project Demonstration Video](https://drive.google.com/file/d/19f_vnxbhd-2fIQaANLvpEUsAfV1assqi/view)**
+
+**Project Members:**
+- Laiba Kashif — 24F-3069
+- Hamna Maryam — 24F-3063
+
+**Course:** Software Quality Engineering (SQE)
+
+**Section:** BSE-5A
+
 ## GitHub Collaboration
 
 Git and GitHub were used to manage the project collaboratively.

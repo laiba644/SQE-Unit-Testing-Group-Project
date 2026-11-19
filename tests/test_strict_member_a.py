@@ -1,8 +1,4 @@
-"""Strict SQE per-function test suite: 5 distinct inputs per function for this allocation.
 
-OWNER PLACEHOLDER: Students must review/extend their own allocated cases and commit
-from their own Git accounts. This generated allocation is not contribution evidence.
-"""
 import sqlite3
 import pytest
 import db
@@ -193,7 +189,7 @@ def test_get_all_tasks_a(case, isolated_db):
     (1,0,'found'),
     (2,1,'found'),
     (1,999,'none'),
-    (1,0,'found'),
+    (3,2,'found'),
 ], ids=['A-get_task_by_id-01', 'A-get_task_by_id-02', 'A-get_task_by_id-03', 'A-get_task_by_id-04', 'A-get_task_by_id-05'])
 def test_get_task_by_id_a(case, isolated_db):
     count, offset, expected=case

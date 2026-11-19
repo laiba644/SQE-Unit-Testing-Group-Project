@@ -1,0 +1,20 @@
+case_id,function,input_type,input_value,expected_value,expected_exception,technique,purpose
+CSV-UNIT-01,validate_title,str,A,A,,BVA,Minimum nonempty title (1 char)
+CSV-UNIT-02,validate_title,str,XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,,BVA,Maximum valid title (100 chars)
+CSV-UNIT-03,validate_title,str,XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX,,ValueError,BVA,Title above maximum (101 chars)
+CSV-UNIT-04,validate_title,str,,,ValueError,ECP,Empty title rejected
+CSV-UNIT-05,validate_title,str,   ,,ValueError,ECP,Whitespace-only title rejected
+CSV-UNIT-06,validate_title,str,  Write tests  ,Write tests,,ECP,Surrounding whitespace trimmed
+CSV-UNIT-07,validate_title,none,,,TypeError,ECP,Non-string title rejected
+CSV-UNIT-08,validate_due_date,str,2028-02-29,2028-02-29,,BVA,Valid leap day
+CSV-UNIT-09,validate_due_date,str,2027-02-29,,ValueError,BVA,Invalid non-leap-year February 29
+CSV-UNIT-10,validate_due_date,str,2026-02-30,,ValueError,BVA,Impossible day in February
+CSV-UNIT-11,validate_due_date,str,2026/10/21,,ValueError,ECP,Wrong separator format
+CSV-UNIT-12,validate_due_date,str,2026-01-01,2026-01-01,,ECP,Past date accepted by module
+CSV-UNIT-13,validate_due_date,str,,,ValueError,ECP,Empty date rejected
+CSV-UNIT-14,validate_due_date,none,,,TypeError,ECP,Non-string date rejected
+CSV-UNIT-15,validate_status,str,pending,pending,,ECP,Pending accepted
+CSV-UNIT-16,validate_status,str,completed,completed,,ECP,Completed accepted
+CSV-UNIT-17,validate_status,str,unknown,,ValueError,ECP,Unsupported status rejected
+CSV-UNIT-18,validate_status,str,,,ValueError,ECP,Empty status rejected
+CSV-UNIT-19,validate_status,none,,,ValueError,ECP,None status rejected
